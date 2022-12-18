@@ -11,15 +11,15 @@ services:
     networks:
       - main
     ports:
-      - 8080:8080
+      - 8081:8081
     volumes:
       - ./app:/app
-    env_file:
-      - ${APP_ENV}
-    command: >
-      /bin/bash -c "
-      if [ "${RELOAD}" == "true" ]; then
-        /start-reload.sh
-      else
-        /start.sh
-      fi"
+    # env_file:
+    #   - ${APP_ENV}
+    # command: >
+    #   /bin/bash -c "
+    #   if [ "${RELOAD}" == "true" ]; then
+    #     /start-reload.sh
+    #   else
+    #     /start.sh
+    #   fi"
